@@ -646,5 +646,162 @@ Errors propagate **backward** through the network, hence "backpropagation."
 ```
 
 ---
-#   A I E x o p l a n e t F i n d e r  
+
+## Project Roadmap
+
+### Phase 1: Mathematical Foundations (2–4 weeks)
+
+- [ ] Linear algebra (vectors, matrices, dot products)
+- [ ] Calculus (derivatives, chain rule)
+- [ ] Probability (distributions, Bayes' theorem)
+
+**Resources**:
+- 3Blue1Brown: "Essence of Linear Algebra" (YouTube)
+- 3Blue1Brown: "Essence of Calculus" (YouTube)
+- Khan Academy: Probability and Statistics
+
+### Phase 2: Core Machine Learning (3–4 weeks)
+
+- [ ] Training/validation/test splits
+- [ ] Loss functions and optimization
+- [ ] Overfitting and regularization
+- [ ] Linear and logistic regression from scratch
+
+**Resources**:
+- Andrew Ng's Machine Learning Specialization (Coursera)
+
+### Phase 3: Deep Learning Fundamentals (4–6 weeks)
+
+- [ ] Perceptrons and multilayer networks
+- [ ] Backpropagation implementation
+- [ ] CNNs for pattern recognition
+- [ ] RNNs/LSTMs for sequences
+
+**Resources**:
+- Fast.ai: "Practical Deep Learning for Coders"
+- Andrej Karpathy's YouTube tutorials
+
+### Phase 4: Modern Architectures (4–6 weeks)
+
+- [ ] Transformers and attention mechanisms
+- [ ] Language model concepts (tokenization, embeddings)
+- [ ] Training at scale
+
+**Resources**:
+- Andrej Karpathy: "Let's build GPT"
+- "Attention Is All You Need" paper
+
+### Phase 5: Exoplanet Model Training (ongoing)
+
+- [ ] Download and preprocess Kepler/TESS data
+- [ ] Build light curve classifier
+- [ ] Implement uncertainty quantification
+- [ ] Evaluate on held-out test set
+
+### Phase 6: Mastery (6–12+ months)
+
+- [ ] Read seminal papers
+- [ ] Experiment with novel architectures
+- [ ] Contribute to open-source ML projects
+
+---
+
+## Setup and Installation
+
+### Prerequisites
+
+- Python 3.8+
+- pip package manager
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/exoplanet-transit-detection.git
+cd exoplanet-transit-detection
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install numpy pandas matplotlib
+pip install lightkurve
+pip install torch torchvision
+pip install scikit-learn
+```
+
+### Verify Installation
+
+```python
+# Test lightkurve installation
+import lightkurve as lk
+
+# Download a sample light curve
+lc = lk.search_lightcurve("Kepler-10", mission="Kepler").download()
+lc.plot()
+```
+
+---
+
+## Resources
+
+### Video Courses
+
+| Course | Platform | Topic |
+|--------|----------|-------|
+| Essence of Linear Algebra | YouTube (3Blue1Brown) | Visual linear algebra intuition |
+| Essence of Calculus | YouTube (3Blue1Brown) | Visual calculus intuition |
+| Machine Learning Specialization | Coursera (Andrew Ng) | ML fundamentals |
+| Practical Deep Learning | Fast.ai | Applied deep learning |
+| Neural Networks: Zero to Hero | YouTube (Andrej Karpathy) | Building neural nets from scratch |
+
+### Documentation
+
+| Resource | URL |
+|----------|-----|
+| Lightkurve | https://docs.lightkurve.org |
+| PyTorch | https://pytorch.org/docs |
+| NASA Exoplanet Archive | https://exoplanetarchive.ipac.caltech.edu |
+| MAST Portal | https://mast.stsci.edu |
+
+### Key Papers
+
+- "Attention Is All You Need" (Vaswani et al., 2017) — Transformer architecture
+- "Deep Learning" (Goodfellow, Bengio, Courville) — Comprehensive textbook
+- "Identifying Exoplanets with Deep Learning" (Shallue & Vanderburg, 2018) — Direct application
+
+---
+
+## Vocabulary Reference
+
+| Term | Definition |
+|------|------------|
+| **Exoplanet** | Planet orbiting a star other than our Sun |
+| **Transit** | Planet passing in front of its star, blocking light |
+| **Light curve** | Graph of stellar brightness over time |
+| **Transit depth** | Fraction of starlight blocked (reveals planet size) |
+| **Orbital period** | Time for one complete orbit (time between transits) |
+| **Limb darkening** | Stars appear dimmer at edges than center |
+| **Flux** | Measured brightness/light intensity |
+| **BJD** | Barycentric Julian Date (astronomical time format) |
+| **Gradient** | Vector of partial derivatives |
+| **Backpropagation** | Algorithm for computing gradients in neural networks |
+| **Loss function** | Measures how wrong predictions are |
+| **Learning rate** | Step size in gradient descent |
+| **Epoch** | One complete pass through training data |
+
+---
+
+## License
+
+MIT License
+
+---
+
+## Acknowledgments
+
+- NASA Kepler and TESS missions for making data publicly available
+- Lightkurve development team
+- The exoplanet research community#   A I E x o p l a n e t F i n d e r  
  
